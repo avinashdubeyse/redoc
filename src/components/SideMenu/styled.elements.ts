@@ -81,7 +81,7 @@ export const MenuItemUl = styled.ul<{ expanded: boolean }>`
   padding: 0;
 
   & & {
-    font-size: 0.929em;
+    font-size: 1.2em;
   }
 
   ${props => (props.expanded ? '' : 'display: none;')};
@@ -99,13 +99,13 @@ export const menuItemDepth = {
   0: css`
     opacity: 0.7;
     text-transform: ${({ theme }) => theme.sidebar.groupItems.textTransform};
-    font-size: 0.8em;
+    font-size: 1.2em;
     padding-bottom: 0;
     cursor: default;
     color: ${props => props.theme.sidebar.textColor};
   `,
   1: css`
-    font-size: 0.929em;
+    font-size: 1.2em;
     text-transform: ${({ theme }) => theme.sidebar.level1Items.textTransform};
     &:hover {
       color: ${props => props.theme.sidebar.activeTextColor};

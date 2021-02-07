@@ -5,7 +5,8 @@ import styled from '../../styled-components';
 import { MenuItemLabel } from '../SideMenu/styled.elements';
 
 export const SearchWrap = styled.div`
-  padding: 5px 0;
+  margin-top: 85px;
+
 `;
 
 export const SearchInput = styled.input.attrs(() => ({
@@ -25,7 +26,7 @@ export const SearchInput = styled.input.attrs(() => ({
       )};
   font-family: ${({ theme }) => theme.typography.fontFamily};
   font-weight: bold;
-  font-size: 13px;
+  font-size: 14px;
   color: ${props => props.theme.sidebar.textColor};
   background-color: transparent;
   outline: none;

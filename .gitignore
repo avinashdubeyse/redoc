@@ -9,13 +9,14 @@
 # Linux trash folder which might appear on any partition or disk
 .Trash-*
 
-demo/dist/
+
 
 ### Node ###
 # Logs
 logs
 *.log
 npm-debug.log*
+.history/*
 
 # Dependency directory
 # https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git

@@ -1,6 +1,7 @@
 import { observer } from 'mobx-react';
 import * as React from 'react';
 
+
 import { IMenuItem, MenuStore } from '../../services/MenuStore';
 import { OptionsContext } from '../OptionsProvider';
 import { MenuItems } from './MenuItems';
@@ -24,11 +25,13 @@ export class SideMenu extends React.Component<{ menu: MenuStore; className?: str
         }}
       >
         <MenuItems items={store.items} onActivate={this.activate} root={true} />
+       <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         <RedocAttribution>
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/Redocly/redoc">
             Powered by ReDoc
           </a>
         </RedocAttribution>
+        
       </PerfectScrollbarWrap>
     );
   }

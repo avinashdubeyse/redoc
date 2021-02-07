@@ -131,9 +131,13 @@ const defaultTheme: ThemeInterface = {
     },
   },
   sidebar: {
-    width: '260px',
-    backgroundColor: '#fafafa',
-    textColor: '#333333',
+    width: '380px',
+    backgroundColor: '#0058A3',
+    textColor: '#FFFFFF',
+    fontWeight: '900',
+    fontSize: '22px',
+    
+    
     activeTextColor: theme =>
       theme.sidebar.textColor !== defaultTheme.sidebar!.textColor
         ? theme.sidebar.textColor
@@ -314,6 +318,8 @@ export interface ResolvedThemeInterface {
     backgroundColor: string;
     textColor: string;
     activeTextColor: string;
+    fontWeight: string;
+    fontSize: string;
     groupItems: {
       textTransform: string;
     };
