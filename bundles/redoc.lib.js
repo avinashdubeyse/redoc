@@ -7152,7 +7152,7 @@ var defaultTheme = {
         }
     },
     sidebar: {
-        width: '380px',
+        width: '260px',
         backgroundColor: '#0058A3',
         textColor: '#FFFFFF',
         fontWeight: '900',
@@ -7725,7 +7725,7 @@ var ErrorBoundary_ErrorBoundary = /** @class */ (function (_super) {
                 external_react_["createElement"]("br", null),
                 external_react_["createElement"]("small", null,
                     " Commit: ",
-                    "51f470d9"));
+                    "93528d34"));
         }
         return external_react_["Children"].only(this.props.children);
     };
