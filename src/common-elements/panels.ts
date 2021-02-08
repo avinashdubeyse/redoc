@@ -5,6 +5,13 @@ export const MiddlePanel = styled.div<{ compact?: boolean }>`
   width: calc(100% - ${props => props.theme.rightPanel.width});
   padding: 0 ${props => props.theme.spacing.sectionHorizontal}px;
 
+  > h2 {
+    font-size: 24px;
+    > div > p {
+      font-weight: 600;
+    }
+  }
+
   ${({ compact, theme }) =>
     media.lessThan('medium', true)`
     width: 100%;
@@ -61,7 +68,11 @@ export const RightPanel = styled.div`
 `;
 
 export const DarkRightPanel = styled(RightPanel)`
-  background-color: ${props => props.theme.rightPanel.backgroundColor};
+  position: relative;
+  background-color: ${(props) => props.theme.rightPanel.backgroundColor};
+  > :nth-child(2) {
+    margin-top: 1.25rem;
+  }
 `;
 
 export const Row = styled.div`

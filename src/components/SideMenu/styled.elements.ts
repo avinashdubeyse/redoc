@@ -9,8 +9,8 @@ export const OperationBadge = styled.span.attrs((props: { type: string }) => ({
 }))<{ type: string }>`
   width: 9ex;
   display: inline-block;
-  height: ${props => props.theme.typography.code.fontSize};
-  line-height: ${props => props.theme.typography.code.fontSize};
+  height: ${(props) => props.theme.typography.code.fontSize};
+  line-height: ${(props) => props.theme.typography.code.fontSize};
   background-color: #333;
   border-radius: 3px;
   background-repeat: no-repeat;
@@ -81,10 +81,14 @@ export const MenuItemUl = styled.ul<{ expanded: boolean }>`
   padding: 0;
 
   & & {
-    font-size: 1.2em;
+    font-size: 0.929em;
   }
 
-  ${props => (props.expanded ? '' : 'display: none;')};
+  ${(props) => (props.expanded ? '' : 'display: none;')};
+  > li > label {
+    display: flex;
+    justify-content: space-between;
+  }
 `;
 
 export const MenuItemLi = styled.li<{ depth: number }>`
@@ -92,24 +96,21 @@ export const MenuItemLi = styled.li<{ depth: number }>`
   overflow: hidden;
   text-overflow: ellipsis;
   padding: 0;
-  ${props => (props.depth === 0 ? 'margin-top: 15px' : '')};
+  ${(props) => (props.depth === 0 ? 'margin-top: 15px' : '')};
+
+  :first-child {
+    ${(props) => (props.depth === 0 ? 'margin-top: 30px;' : '')};
+  }
 `;
 
 export const menuItemDepth = {
   0: css`
-    opacity: 0.7;
-    text-transform: ${({ theme }) => theme.sidebar.groupItems.textTransform};
-    font-size: 1.2em;
-    padding-bottom: 0;
-    cursor: default;
-    color: ${props => props.theme.sidebar.textColor};
+    font-size: 1em;
+    font-weight: 600;
+    color: ${(props) => props.theme.sidebar.textColor};
   `,
   1: css`
-    font-size: 1.2em;
-    text-transform: ${({ theme }) => theme.sidebar.level1Items.textTransform};
-    &:hover {
-      color: ${props => props.theme.sidebar.activeTextColor};
-    }
+    font-weight: 600;
   `,
   2: css`
     color: ${props => props.theme.sidebar.textColor};
@@ -167,20 +168,22 @@ export const MenuItemTitle = styled.span<{ width?: string }>`
 
 export const RedocAttribution = styled.div`
   ${({ theme }) => `
-  font-size: 0.8em;
-  margin-top: ${theme.spacing.unit * 2}px;
-  padding: 0 ${theme.spacing.unit * 4}px;
-  text-align: left;
+  font-size: 0.65em;
+  margin-top: 900px;
+  padding: 5px ${theme.spacing.unit * 4}px;
 
-  opacity: 0.7;
+
+
 
   a,
   a:visited,
   a:hover {
     color: ${theme.sidebar.textColor} !important;
-    border-top: 1px solid ${darken(0.1, theme.sidebar.backgroundColor)};
-    padding: ${theme.spacing.unit}px 0;
+  
     display: block;
+    opacity: 0.5;
+    text-align: center;
+    text-decoration: none !important;
   }
 `};
 `;

@@ -6955,7 +6955,7 @@ var defaultTheme = {
     colors: {
         tonalOffset: 0.2,
         primary: {
-            main: '#32329f',
+            main: '#484858',
             light: function (_a) {
                 var colors = _a.colors;
                 return Object(external_polished_["lighten"])(colors.tonalOffset, colors.primary.main);
@@ -7082,15 +7082,15 @@ var defaultTheme = {
             }
         },
         http: {
-            get: '#2F8132',
-            post: '#186FAF',
-            put: '#95507c',
-            options: '#947014',
-            patch: '#bf581d',
-            delete: '#cc3333',
+            get: '#61affe',
+            post: '#49cc90',
+            put: '#fca130',
+            options: '#0d5aa7',
+            patch: '#50e3c2',
+            delete: '#f93e3e',
             basic: '#707070',
             link: '#07818F',
-            head: '#A23DAD'
+            head: '#9012fe'
         }
     },
     schema: {
@@ -7109,17 +7109,17 @@ var defaultTheme = {
     },
     typography: {
         fontSize: '14px',
-        lineHeight: '1.5em',
-        fontWeightRegular: '400',
-        fontWeightBold: '600',
-        fontWeightLight: '300',
+        lineHeight: '1.65em',
+        fontWeightRegular: '600',
+        fontWeightBold: '700',
+        fontWeightLight: '500',
         fontFamily: 'Roboto, sans-serif',
         smoothing: 'antialiased',
         optimizeSpeed: true,
         headings: {
             fontFamily: 'Montserrat, sans-serif',
-            fontWeight: '400',
-            lineHeight: '1.6em'
+            fontWeight: '700',
+            lineHeight: '1.7em'
         },
         code: {
             fontSize: '13px',
@@ -7137,10 +7137,8 @@ var defaultTheme = {
             wrap: false
         },
         links: {
-            color: function (_a) {
-                var colors = _a.colors;
-                return colors.primary.main;
-            },
+            color: '#5F96FA',
+            //({ colors }) => colors.primary.main,
             visited: function (_a) {
                 var typography = _a.typography;
                 return typography.links.color;
@@ -7152,10 +7150,10 @@ var defaultTheme = {
         }
     },
     sidebar: {
-        width: '260px',
+        width: '320px',
         backgroundColor: '#0058A3',
         textColor: '#FFFFFF',
-        fontWeight: '900',
+        fontWeight: '700',
         fontSize: '22px',
         activeTextColor: function (theme) { return theme.sidebar.textColor !== defaultTheme.sidebar.textColor ? theme.sidebar.textColor : theme.colors.primary.main; },
         groupItems: {
@@ -7181,15 +7179,12 @@ var defaultTheme = {
         gutter: '2px'
     },
     rightPanel: {
-        backgroundColor: '#263238',
-        width: '40%',
+        backgroundColor: '#525973',
+        width: '30%',
         textColor: '#ffffff'
     },
     codeBlock: {
-        backgroundColor: function (_a) {
-            var rightPanel = _a.rightPanel;
-            return Object(external_polished_["darken"])(0.1, rightPanel.backgroundColor);
-        }
+        backgroundColor: '#2A2F45'
     }
 };
 /* harmony default export */ var src_theme = (defaultTheme);
@@ -7725,7 +7720,7 @@ var ErrorBoundary_ErrorBoundary = /** @class */ (function (_super) {
                 external_react_["createElement"]("br", null),
                 external_react_["createElement"]("small", null,
                     " Commit: ",
-                    "93528d34"));
+                    "7a423627"));
         }
         return external_react_["Children"].only(this.props.children);
     };
@@ -10869,7 +10864,7 @@ var SearchStore_SearchStore = /** @class */ (function () {
 
 
 
-var MiddlePanel = styled_components.div(panels_templateObject_2 || (panels_templateObject_2 = Object(external_tslib_["__makeTemplateObject"])(["\n  width: calc(100% - ", ");\n  padding: 0 ", "px;\n\n  ", ";\n"], ["\n  width: calc(100% - ", ");\n  padding: 0 ", "px;\n\n  ",
+var MiddlePanel = styled_components.div(panels_templateObject_2 || (panels_templateObject_2 = Object(external_tslib_["__makeTemplateObject"])(["\n  width: calc(100% - ", ");\n  padding: 0 ", "px;\n\n  > h2 {\n    font-size: 24px;\n    > div > p {\n      font-weight: 600;\n    }\n  }\n\n  ", ";\n"], ["\n  width: calc(100% - ", ");\n  padding: 0 ", "px;\n\n  > h2 {\n    font-size: 24px;\n    > div > p {\n      font-weight: 600;\n    }\n  }\n\n  ",
     ";\n"])), function (props) { return props.theme.rightPanel.width; }, function (props) { return props.theme.spacing.sectionHorizontal; }, function (_a) {
     var compact = _a.compact, theme = _a.theme;
     return media.lessThan('medium', true)(panels_templateObject_1 || (panels_templateObject_1 = Object(external_tslib_["__makeTemplateObject"])(["\n    width: 100%;\n    padding: ", ";\n  "], ["\n    width: 100%;\n    padding: ", ";\n  "])), (compact ? 0 : theme.spacing.sectionVertical) + "px " + theme.spacing.sectionHorizontal + "px");
@@ -10888,7 +10883,7 @@ var RightPanel = styled_components.div(templateObject_6 || (templateObject_6 = O
     var theme = _a.theme;
     return theme.rightPanel.textColor;
 }, function (props) { return props.theme.rightPanel.backgroundColor; }, function (props) { return props.theme.spacing.sectionHorizontal; }, media.lessThan('medium', true)(templateObject_5 || (templateObject_5 = Object(external_tslib_["__makeTemplateObject"])(["\n    width: 100%;\n    padding: ", ";\n  "], ["\n    width: 100%;\n    padding: ", ";\n  "])), function (props) { return props.theme.spacing.sectionVertical + "px " + props.theme.spacing.sectionHorizontal + "px"; }));
-var DarkRightPanel = styled_components(RightPanel)(templateObject_7 || (templateObject_7 = Object(external_tslib_["__makeTemplateObject"])(["\n  background-color: ", ";\n"], ["\n  background-color: ", ";\n"])), function (props) { return props.theme.rightPanel.backgroundColor; });
+var DarkRightPanel = styled_components(RightPanel)(templateObject_7 || (templateObject_7 = Object(external_tslib_["__makeTemplateObject"])(["\n  position: relative;\n  background-color: ", ";\n  > :nth-child(2) {\n    margin-top: 1.25rem;\n  }\n"], ["\n  position: relative;\n  background-color: ", ";\n  > :nth-child(2) {\n    margin-top: 1.25rem;\n  }\n"])), function (props) { return props.theme.rightPanel.backgroundColor; });
 var Row = styled_components.div(templateObject_9 || (templateObject_9 = Object(external_tslib_["__makeTemplateObject"])(["\n  display: flex;\n  width: 100%;\n  padding: 0;\n\n  ", ";\n"], ["\n  display: flex;\n  width: 100%;\n  padding: 0;\n\n  ",
     ";\n"])), media.lessThan('medium', true)(templateObject_8 || (templateObject_8 = Object(external_tslib_["__makeTemplateObject"])(["\n    flex-direction: column;\n  "], ["\n    flex-direction: column;\n  "]))));
 var panels_templateObject_1, panels_templateObject_2, panels_templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8, templateObject_9;
@@ -11127,7 +11122,7 @@ var PropertyNameCell = styled_components(PropertyCell)(fields_layout_templateObj
 }, extensionsHook('PropertyNameCell'));
 var PropertyDetailsCell = styled_components.td(fields_layout_templateObject_7 || (fields_layout_templateObject_7 = Object(external_tslib_["__makeTemplateObject"])(["\n  border-bottom: 1px solid #9fb4be;\n  padding: 10px 0;\n  width: ", ";\n  box-sizing: border-box;\n\n  tr.expanded & {\n    border-bottom: none;\n  }\n\n  ", "\n\n  ", ";\n"], ["\n  border-bottom: 1px solid #9fb4be;\n  padding: 10px 0;\n  width: ", ";\n  box-sizing: border-box;\n\n  tr.expanded & {\n    border-bottom: none;\n  }\n\n  ",
     "\n\n  ", ";\n"])), function (props) { return props.theme.schema.defaultDetailsWidth; }, media.lessThan('small')(fields_layout_templateObject_6 || (fields_layout_templateObject_6 = Object(external_tslib_["__makeTemplateObject"])(["\n    padding: 0 20px;\n    border-bottom: none;\n    border-left: 1px solid ", ";\n\n    tr.last > & {\n      border-left: none;\n    }\n  "], ["\n    padding: 0 20px;\n    border-bottom: none;\n    border-left: 1px solid ", ";\n\n    tr.last > & {\n      border-left: none;\n    }\n  "])), function (props) { return props.theme.schema.linesColor; }), extensionsHook('PropertyDetailsCell'));
-var PropertyBullet = styled_components.span(fields_layout_templateObject_8 || (fields_layout_templateObject_8 = Object(external_tslib_["__makeTemplateObject"])(["\n  color: ", ";\n  font-family: ", ";\n  margin-right: 10px;\n\n  &::before {\n    content: '';\n    display: inline-block;\n    vertical-align: middle;\n    width: 10px;\n    height: 1px;\n    background: ", ";\n  }\n\n  &::after {\n    content: '';\n    display: inline-block;\n    vertical-align: middle;\n    width: 1px;\n    background: ", ";\n    height: 7px;\n  }\n"], ["\n  color: ", ";\n  font-family: ", ";\n  margin-right: 10px;\n\n  &::before {\n    content: '';\n    display: inline-block;\n    vertical-align: middle;\n    width: 10px;\n    height: 1px;\n    background: ", ";\n  }\n\n  &::after {\n    content: '';\n    display: inline-block;\n    vertical-align: middle;\n    width: 1px;\n    background: ", ";\n    height: 7px;\n  }\n"])), function (props) { return props.theme.schema.linesColor; }, function (props) { return props.theme.typography.code.fontFamily; }, function (props) { return props.theme.schema.linesColor; }, function (props) { return props.theme.schema.linesColor; });
+var PropertyBullet = styled_components.span(fields_layout_templateObject_8 || (fields_layout_templateObject_8 = Object(external_tslib_["__makeTemplateObject"])(["\n  color: ", ";\n  font-family: ", ";\n  margin-right: 10px;\n\n  &::before {\n    content: '';\n    display: inline-block;\n    vertical-align: middle;\n    width: 10px;\n    height: 1px;\n    background: ", ";\n  }\n\n  &::after {\n    content: '';\n    display: inline-block;\n    vertical-align: middle;\n    width: 1px;\n    background: ", ";\n    height: 22px;\n  }\n"], ["\n  color: ", ";\n  font-family: ", ";\n  margin-right: 10px;\n\n  &::before {\n    content: '';\n    display: inline-block;\n    vertical-align: middle;\n    width: 10px;\n    height: 1px;\n    background: ", ";\n  }\n\n  &::after {\n    content: '';\n    display: inline-block;\n    vertical-align: middle;\n    width: 1px;\n    background: ", ";\n    height: 22px;\n  }\n"])), function (props) { return props.theme.schema.linesColor; }, function (props) { return props.theme.typography.code.fontFamily; }, function (props) { return props.theme.schema.linesColor; }, function (props) { return props.theme.schema.linesColor; });
 var InnerPropertiesWrap = styled_components.div(fields_layout_templateObject_9 || (fields_layout_templateObject_9 = Object(external_tslib_["__makeTemplateObject"])(["\n  padding: ", ";\n"], ["\n  padding: ",
     ";\n"])), function (_a) {
     var theme = _a.theme;
@@ -11152,10 +11147,10 @@ var fields_layout_templateObject_1, fields_layout_templateObject_2, fields_layou
 
 var OneOfList = styled_components.div(schema_templateObject_1 || (schema_templateObject_1 = Object(external_tslib_["__makeTemplateObject"])(["\n  margin: 0 0 3px 0;\n  display: inline-block;\n"], ["\n  margin: 0 0 3px 0;\n  display: inline-block;\n"])));
 var OneOfLabel = styled_components.span(schema_templateObject_2 || (schema_templateObject_2 = Object(external_tslib_["__makeTemplateObject"])(["\n  font-size: 0.9em;\n  margin-right: 10px;\n  color: ", ";\n  font-family: ", ";\n}\n"], ["\n  font-size: 0.9em;\n  margin-right: 10px;\n  color: ", ";\n  font-family: ", ";\n}\n"])), function (props) { return props.theme.colors.primary.main; }, function (props) { return props.theme.typography.headings.fontFamily; });
-var schema_OneOfButton = styled_components.button(schema_templateObject_3 || (schema_templateObject_3 = Object(external_tslib_["__makeTemplateObject"])(["\n  display: inline-block;\n  margin-right: 10px;\n  margin-bottom: 5px;\n  font-size: 0.8em;\n  cursor: pointer;\n  border: 1px solid ", ";\n  padding: 2px 10px;\n  line-height: 1.5em;\n  outline: none;\n  &:focus {\n    box-shadow: 0 0 0 1px ", ";\n  }\n\n  ", "\n"], ["\n  display: inline-block;\n  margin-right: 10px;\n  margin-bottom: 5px;\n  font-size: 0.8em;\n  cursor: pointer;\n  border: 1px solid ", ";\n  padding: 2px 10px;\n  line-height: 1.5em;\n  outline: none;\n  &:focus {\n    box-shadow: 0 0 0 1px ", ";\n  }\n\n  ",
-    "\n"])), function (props) { return props.theme.colors.primary.main; }, function (props) { return props.theme.colors.primary.main; }, function (props) {
+var schema_OneOfButton = styled_components.button(schema_templateObject_3 || (schema_templateObject_3 = Object(external_tslib_["__makeTemplateObject"])(["\ndisplay: inline-block;\nmargin-right: 10px;\nmargin-bottom: 5px;\nfont-size: 0.8em;\ncursor: pointer;\nborder: 1px solid #525973;\nborder-radius: 0.75rem;\npadding: 2px 10px;\nline-height: 1.5em;\noutline: none;\n&:focus {\n  box-shadow: 0 0 0 1px #525973;\n}\n\n  ", "\n"], ["\ndisplay: inline-block;\nmargin-right: 10px;\nmargin-bottom: 5px;\nfont-size: 0.8em;\ncursor: pointer;\nborder: 1px solid #525973;\nborder-radius: 0.75rem;\npadding: 2px 10px;\nline-height: 1.5em;\noutline: none;\n&:focus {\n  box-shadow: 0 0 0 1px #525973;\n}\n\n  ",
+    "\n"])), function (props) {
     if (props.active) {
-        return "\n      color: white;\n      background-color: " + props.theme.colors.primary.main + ";\n      &:focus {\n        box-shadow: none;\n        background-color: " + Object(external_polished_["darken"])(0.15, props.theme.colors.primary.main) + ";\n      }\n      ";
+        return "\n      color: white;\n      background-color: #525973;\n      &:focus {\n        box-shadow: none;\n        background-color: " + Object(external_polished_["darken"])(0.15, props.theme.colors.primary.main) + ";\n      }\n      ";
     }
     else {
         return "\n        color: " + props.theme.colors.primary.main + ";\n        background-color: white;\n      ";
@@ -13228,19 +13223,11 @@ function menuItemActiveBg(depth, _a) {
         return '';
     }
 }
-var MenuItemUl = styled_components.ul(SideMenu_styled_elements_templateObject_2 || (SideMenu_styled_elements_templateObject_2 = Object(external_tslib_["__makeTemplateObject"])(["\n  margin: 0;\n  padding: 0;\n\n  & & {\n    font-size: 1.2em;\n  }\n\n  ", ";\n"], ["\n  margin: 0;\n  padding: 0;\n\n  & & {\n    font-size: 1.2em;\n  }\n\n  ", ";\n"])), function (props) { return props.expanded ? '' : 'display: none;'; });
-var MenuItemLi = styled_components.li(SideMenu_styled_elements_templateObject_3 || (SideMenu_styled_elements_templateObject_3 = Object(external_tslib_["__makeTemplateObject"])(["\n  list-style: none inside none;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  padding: 0;\n  ", ";\n"], ["\n  list-style: none inside none;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  padding: 0;\n  ", ";\n"])), function (props) { return props.depth === 0 ? 'margin-top: 15px' : ''; });
+var MenuItemUl = styled_components.ul(SideMenu_styled_elements_templateObject_2 || (SideMenu_styled_elements_templateObject_2 = Object(external_tslib_["__makeTemplateObject"])(["\n  margin: 0;\n  padding: 0;\n\n  & & {\n    font-size: 0.929em;\n  }\n\n  ", ";\n  > li > label {\n    display: flex;\n    justify-content: space-between;\n  }\n"], ["\n  margin: 0;\n  padding: 0;\n\n  & & {\n    font-size: 0.929em;\n  }\n\n  ", ";\n  > li > label {\n    display: flex;\n    justify-content: space-between;\n  }\n"])), function (props) { return props.expanded ? '' : 'display: none;'; });
+var MenuItemLi = styled_components.li(SideMenu_styled_elements_templateObject_3 || (SideMenu_styled_elements_templateObject_3 = Object(external_tslib_["__makeTemplateObject"])(["\n  list-style: none inside none;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  padding: 0;\n  ", ";\n\n  :first-child {\n    ", ";\n  }\n"], ["\n  list-style: none inside none;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  padding: 0;\n  ", ";\n\n  :first-child {\n    ", ";\n  }\n"])), function (props) { return props.depth === 0 ? 'margin-top: 15px' : ''; }, function (props) { return props.depth === 0 ? 'margin-top: 30px;' : ''; });
 var menuItemDepth = {
-    0: css(SideMenu_styled_elements_templateObject_4 || (SideMenu_styled_elements_templateObject_4 = Object(external_tslib_["__makeTemplateObject"])(["\n    opacity: 0.7;\n    text-transform: ", ";\n    font-size: 1.2em;\n    padding-bottom: 0;\n    cursor: default;\n    color: ", ";\n  "], ["\n    opacity: 0.7;\n    text-transform: ",
-        ";\n    font-size: 1.2em;\n    padding-bottom: 0;\n    cursor: default;\n    color: ", ";\n  "])), function (_a) {
-        var theme = _a.theme;
-        return theme.sidebar.groupItems.textTransform;
-    }, function (props) { return props.theme.sidebar.textColor; }),
-    1: css(SideMenu_styled_elements_templateObject_5 || (SideMenu_styled_elements_templateObject_5 = Object(external_tslib_["__makeTemplateObject"])(["\n    font-size: 1.2em;\n    text-transform: ", ";\n    &:hover {\n      color: ", ";\n    }\n  "], ["\n    font-size: 1.2em;\n    text-transform: ",
-        ";\n    &:hover {\n      color: ", ";\n    }\n  "])), function (_a) {
-        var theme = _a.theme;
-        return theme.sidebar.level1Items.textTransform;
-    }, function (props) { return props.theme.sidebar.activeTextColor; }),
+    0: css(SideMenu_styled_elements_templateObject_4 || (SideMenu_styled_elements_templateObject_4 = Object(external_tslib_["__makeTemplateObject"])(["\n    font-size: 1em;\n    font-weight: 600;\n    color: ", ";\n  "], ["\n    font-size: 1em;\n    font-weight: 600;\n    color: ", ";\n  "])), function (props) { return props.theme.sidebar.textColor; }),
+    1: css(SideMenu_styled_elements_templateObject_5 || (SideMenu_styled_elements_templateObject_5 = Object(external_tslib_["__makeTemplateObject"])(["\n    font-weight: 600;\n  "], ["\n    font-weight: 600;\n  "]))),
     2: css(styled_elements_templateObject_6 || (styled_elements_templateObject_6 = Object(external_tslib_["__makeTemplateObject"])(["\n    color: ", ";\n  "], ["\n    color: ", ";\n  "])), function (props) { return props.theme.sidebar.textColor; })
 };
 var MenuItemLabel = styled_components.label.attrs(function (props) { return ({
@@ -13269,7 +13256,7 @@ var MenuItemTitle = styled_components.span(styled_elements_templateObject_8 || (
 var RedocAttribution = styled_components.div(styled_elements_templateObject_9 || (styled_elements_templateObject_9 = Object(external_tslib_["__makeTemplateObject"])(["\n  ", ";\n"], ["\n  ",
     ";\n"])), function (_a) {
     var theme = _a.theme;
-    return "\n  font-size: 0.8em;\n  margin-top: " + theme.spacing.unit * 2 + "px;\n  padding: 0 " + theme.spacing.unit * 4 + "px;\n  text-align: left;\n\n  opacity: 0.7;\n\n  a,\n  a:visited,\n  a:hover {\n    color: " + theme.sidebar.textColor + " !important;\n    border-top: 1px solid " + Object(external_polished_["darken"])(0.1, theme.sidebar.backgroundColor) + ";\n    padding: " + theme.spacing.unit + "px 0;\n    display: block;\n  }\n";
+    return "\n  font-size: 0.65em;\n  margin-top: 900px;\n  padding: 5px " + theme.spacing.unit * 4 + "px;\n\n\n\n\n  a,\n  a:visited,\n  a:hover {\n    color: " + theme.sidebar.textColor + " !important;\n  \n    display: block;\n    opacity: 0.5;\n    text-align: center;\n    text-decoration: none !important;\n  }\n";
 });
 var SideMenu_styled_elements_templateObject_1, SideMenu_styled_elements_templateObject_2, SideMenu_styled_elements_templateObject_3, SideMenu_styled_elements_templateObject_4, SideMenu_styled_elements_templateObject_5, styled_elements_templateObject_6, styled_elements_templateObject_7, styled_elements_templateObject_8, styled_elements_templateObject_9;
 
@@ -14418,21 +14405,8 @@ var SideMenu_SideMenu = /** @class */ (function (_super) {
                 wheelPropagation: false
             } },
             external_react_["createElement"](MenuItems_MenuItems, { items: store.items, onActivate: this.activate, root: true }),
-            external_react_["createElement"]("br", null),
-            external_react_["createElement"]("br", null),
-            external_react_["createElement"]("br", null),
-            external_react_["createElement"]("br", null),
-            external_react_["createElement"]("br", null),
-            external_react_["createElement"]("br", null),
-            external_react_["createElement"]("br", null),
-            external_react_["createElement"]("br", null),
-            external_react_["createElement"]("br", null),
-            external_react_["createElement"]("br", null),
-            external_react_["createElement"]("br", null),
-            external_react_["createElement"]("br", null),
-            external_react_["createElement"]("br", null),
             external_react_["createElement"](RedocAttribution, null,
-                external_react_["createElement"]("a", { target: "_blank", rel: "noopener noreferrer", href: "https://github.com/Redocly/redoc" }, "Powered by ReDoc")));
+                external_react_["createElement"]("a", { target: "_blank", rel: "noopener noreferrer", href: "https://github.com/Redocly/redoc" }, "Documentation built on ReDoc")));
     };
     SideMenu.contextType = OptionsContext;
     SideMenu = Object(external_tslib_["__decorate"])([

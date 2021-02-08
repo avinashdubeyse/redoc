@@ -15,24 +15,25 @@ export const OneOfLabel = styled.span`
 `;
 
 export const OneOfButton = styled.button<{ active: boolean }>`
-  display: inline-block;
-  margin-right: 10px;
-  margin-bottom: 5px;
-  font-size: 0.8em;
-  cursor: pointer;
-  border: 1px solid ${props => props.theme.colors.primary.main};
-  padding: 2px 10px;
-  line-height: 1.5em;
-  outline: none;
-  &:focus {
-    box-shadow: 0 0 0 1px ${props => props.theme.colors.primary.main};
-  }
+display: inline-block;
+margin-right: 10px;
+margin-bottom: 5px;
+font-size: 0.8em;
+cursor: pointer;
+border: 1px solid #525973;
+border-radius: 0.75rem;
+padding: 2px 10px;
+line-height: 1.5em;
+outline: none;
+&:focus {
+  box-shadow: 0 0 0 1px #525973;
+}
 
   ${props => {
     if (props.active) {
       return `
       color: white;
-      background-color: ${props.theme.colors.primary.main};
+      background-color: #525973;
       &:focus {
         box-shadow: none;
         background-color: ${darken(0.15, props.theme.colors.primary.main)};

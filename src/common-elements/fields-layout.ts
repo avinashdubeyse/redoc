@@ -122,7 +122,7 @@ export const PropertyBullet = styled.span`
     vertical-align: middle;
     width: 1px;
     background: ${props => props.theme.schema.linesColor};
-    height: 7px;
+    height: 22px;
   }
 `;
 

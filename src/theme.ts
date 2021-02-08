@@ -14,7 +14,7 @@ const defaultTheme: ThemeInterface = {
   colors: {
     tonalOffset: 0.2,
     primary: {
-      main: '#32329f',
+      main: '#484858',
       light: ({ colors }) => lighten(colors.tonalOffset, colors.primary.main),
       dark: ({ colors }) => darken(colors.tonalOffset, colors.primary.main),
       contrastText: ({ colors }) => readableColor(colors.primary.main),
@@ -72,15 +72,15 @@ const defaultTheme: ThemeInterface = {
       },
     },
     http: {
-      get: '#2F8132',
-      post: '#186FAF',
-      put: '#95507c',
-      options: '#947014',
-      patch: '#bf581d',
-      delete: '#cc3333',
+      get: '#61affe',
+      post: '#49cc90',
+      put: '#fca130',
+      options: '#0d5aa7',
+      patch: '#50e3c2',
+      delete: '#f93e3e',
       basic: '#707070',
       link: '#07818F',
-      head: '#A23DAD',
+      head: '#9012fe',
     },
   },
   schema: {
@@ -103,17 +103,17 @@ const defaultTheme: ThemeInterface = {
   },
   typography: {
     fontSize: '14px',
-    lineHeight: '1.5em',
-    fontWeightRegular: '400',
-    fontWeightBold: '600',
-    fontWeightLight: '300',
+    lineHeight: '1.65em',
+    fontWeightRegular: '600',
+    fontWeightBold: '700',
+    fontWeightLight: '500',
     fontFamily: 'Roboto, sans-serif',
     smoothing: 'antialiased',
     optimizeSpeed: true,
     headings: {
       fontFamily: 'Montserrat, sans-serif',
-      fontWeight: '400',
-      lineHeight: '1.6em',
+      fontWeight: '700',
+      lineHeight: '1.7em',
     },
     code: {
       fontSize: '13px',
@@ -125,16 +125,16 @@ const defaultTheme: ThemeInterface = {
       wrap: false,
     },
     links: {
-      color: ({ colors }) => colors.primary.main,
+      color: '#5F96FA',//({ colors }) => colors.primary.main,
       visited: ({ typography }) => typography.links.color,
       hover: ({ typography }) => lighten(0.2, typography.links.color),
     },
   },
   sidebar: {
-    width: '260px',
+    width: '320px',
     backgroundColor: '#0058A3',
     textColor: '#FFFFFF',
-    fontWeight: '900',
+    fontWeight: '700',
     fontSize: '22px',
     
     
@@ -159,12 +159,12 @@ const defaultTheme: ThemeInterface = {
     gutter: '2px',
   },
   rightPanel: {
-    backgroundColor: '#263238',
-    width: '40%',
+    backgroundColor: '#525973',
+    width: '30%',
     textColor: '#ffffff',
   },
   codeBlock: {
-    backgroundColor: ({ rightPanel }) => darken(0.1, rightPanel.backgroundColor),
+    backgroundColor: '#2A2F45',
   },
 };
 
