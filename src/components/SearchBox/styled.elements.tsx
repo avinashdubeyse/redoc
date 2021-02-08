@@ -1,23 +1,27 @@
 import * as React from 'react';
 
+
 import { darken, getLuminance, lighten } from 'polished';
 import styled from '../../styled-components';
 import { MenuItemLabel } from '../SideMenu/styled.elements';
 
+
 export const SearchWrap = styled.div`
-  margin-top: 85px;
+  margin-top: 50px;
+  margin-bottom: 25px;
 
 `;
 
 export const SearchInput = styled.input.attrs(() => ({
-  className: 'search-input',
+  
 }))`
-  width: calc(100% - ${props => props.theme.spacing.unit * 8}px);
+  width: 220px;
+  height: 45px;
   box-sizing: border-box;
   margin: 0 ${props => props.theme.spacing.unit * 4}px;
   padding: 5px ${props => props.theme.spacing.unit * 2}px 5px
     ${props => props.theme.spacing.unit * 4}px;
-  border: 0;
+  border-radius: 120px;
   border-bottom: 1px solid
     ${({ theme }) =>
       (getLuminance(theme.sidebar.backgroundColor) > 0.5 ? darken : lighten)(
@@ -26,9 +30,10 @@ export const SearchInput = styled.input.attrs(() => ({
       )};
   font-family: ${({ theme }) => theme.typography.fontFamily};
   font-weight: bold;
-  font-size: 14px;
-  color: ${props => props.theme.sidebar.textColor};
-  background-color: transparent;
+  font-size: 12px;
+  color: brown;
+  margin-left: 40px;
+  background-color: white;
   outline: none;
 `;
 
@@ -37,7 +42,7 @@ export const SearchIcon = styled((props: { className?: string }) => (
     className={props.className}
     version="1.1"
     viewBox="0 0 1000 1000"
-    x="0px"
+    x="1px"
     xmlns="http://www.w3.org/2000/svg"
     y="0px"
   >
@@ -47,12 +52,12 @@ export const SearchIcon = styled((props: { className?: string }) => (
   className: 'search-icon',
 })`
   position: absolute;
-  left: ${props => props.theme.spacing.unit * 4}px;
-  height: 1.8em;
-  width: 0.9em;
+  left: 50px;
+  height: 2.8em;
+  width: 1.2em;
 
   path {
-    fill: ${props => props.theme.sidebar.textColor};
+    fill: black;
   }
 `;
 

@@ -132,13 +132,14 @@ export class SearchBox extends React.PureComponent<SearchBoxProps, SearchBoxStat
     results.sort((a, b) => b.score - a.score);
 
     return (
+      
       <SearchWrap role="search">
         {this.state.term && <ClearIcon onClick={this.clear}>×</ClearIcon>}
         <SearchIcon />
         <SearchInput
           value={this.state.term}
           onKeyDown={this.handleKeyDown}
-          placeholder="Search..."
+          placeholder="      Filter tag .."
           aria-label="Search"
           type="text"
           onChange={this.search}

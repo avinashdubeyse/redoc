@@ -7150,7 +7150,7 @@ var defaultTheme = {
         }
     },
     sidebar: {
-        width: '320px',
+        width: '300px',
         backgroundColor: '#0058A3',
         textColor: '#FFFFFF',
         fontWeight: '700',
@@ -7720,7 +7720,7 @@ var ErrorBoundary_ErrorBoundary = /** @class */ (function (_super) {
                 external_react_["createElement"]("br", null),
                 external_react_["createElement"]("small", null,
                     " Commit: ",
-                    "7a423627"));
+                    "9d6e326f"));
         }
         return external_react_["Children"].only(this.props.children);
     };
@@ -14557,22 +14557,20 @@ var Redoc_styled_elements_templateObject_1, Redoc_styled_elements_templateObject
 
 
 
-var SearchWrap = styled_components.div(SearchBox_styled_elements_templateObject_1 || (SearchBox_styled_elements_templateObject_1 = Object(external_tslib_["__makeTemplateObject"])(["\n  margin-top: 85px;\n\n"], ["\n  margin-top: 85px;\n\n"])));
-var SearchInput = styled_components.input.attrs(function () { return ({
-    className: 'search-input'
-}); })(SearchBox_styled_elements_templateObject_2 || (SearchBox_styled_elements_templateObject_2 = Object(external_tslib_["__makeTemplateObject"])(["\n  width: calc(100% - ", "px);\n  box-sizing: border-box;\n  margin: 0 ", "px;\n  padding: 5px ", "px 5px\n    ", "px;\n  border: 0;\n  border-bottom: 1px solid\n    ", ";\n  font-family: ", ";\n  font-weight: bold;\n  font-size: 14px;\n  color: ", ";\n  background-color: transparent;\n  outline: none;\n"], ["\n  width: calc(100% - ", "px);\n  box-sizing: border-box;\n  margin: 0 ", "px;\n  padding: 5px ", "px 5px\n    ", "px;\n  border: 0;\n  border-bottom: 1px solid\n    ",
+var SearchWrap = styled_components.div(SearchBox_styled_elements_templateObject_1 || (SearchBox_styled_elements_templateObject_1 = Object(external_tslib_["__makeTemplateObject"])(["\n  margin-top: 50px;\n  margin-bottom: 25px;\n\n"], ["\n  margin-top: 50px;\n  margin-bottom: 25px;\n\n"])));
+var SearchInput = styled_components.input.attrs(function () { return ({}); })(SearchBox_styled_elements_templateObject_2 || (SearchBox_styled_elements_templateObject_2 = Object(external_tslib_["__makeTemplateObject"])(["\n  width: 220px;\n  height: 45px;\n  box-sizing: border-box;\n  margin: 0 ", "px;\n  padding: 5px ", "px 5px\n    ", "px;\n  border-radius: 120px;\n  border-bottom: 1px solid\n    ", ";\n  font-family: ", ";\n  font-weight: bold;\n  font-size: 12px;\n  color: brown;\n  margin-left: 40px;\n  background-color: white;\n  outline: none;\n"], ["\n  width: 220px;\n  height: 45px;\n  box-sizing: border-box;\n  margin: 0 ", "px;\n  padding: 5px ", "px 5px\n    ", "px;\n  border-radius: 120px;\n  border-bottom: 1px solid\n    ",
     ";\n  font-family: ",
-    ";\n  font-weight: bold;\n  font-size: 14px;\n  color: ", ";\n  background-color: transparent;\n  outline: none;\n"])), function (props) { return props.theme.spacing.unit * 8; }, function (props) { return props.theme.spacing.unit * 4; }, function (props) { return props.theme.spacing.unit * 2; }, function (props) { return props.theme.spacing.unit * 4; }, function (_a) {
+    ";\n  font-weight: bold;\n  font-size: 12px;\n  color: brown;\n  margin-left: 40px;\n  background-color: white;\n  outline: none;\n"])), function (props) { return props.theme.spacing.unit * 4; }, function (props) { return props.theme.spacing.unit * 2; }, function (props) { return props.theme.spacing.unit * 4; }, function (_a) {
     var theme = _a.theme;
     return (Object(external_polished_["getLuminance"])(theme.sidebar.backgroundColor) > 0.5 ? external_polished_["darken"] : external_polished_["lighten"])(0.1, theme.sidebar.backgroundColor);
 }, function (_a) {
     var theme = _a.theme;
     return theme.typography.fontFamily;
-}, function (props) { return props.theme.sidebar.textColor; });
-var SearchIcon = styled_components(function (props) { return external_react_["createElement"]("svg", { className: props.className, version: "1.1", viewBox: "0 0 1000 1000", x: "0px", xmlns: "http://www.w3.org/2000/svg", y: "0px" },
+});
+var SearchIcon = styled_components(function (props) { return external_react_["createElement"]("svg", { className: props.className, version: "1.1", viewBox: "0 0 1000 1000", x: "1px", xmlns: "http://www.w3.org/2000/svg", y: "0px" },
     external_react_["createElement"]("path", { d: "M968.2,849.4L667.3,549c83.9-136.5,66.7-317.4-51.7-435.6C477.1-25,252.5-25,113.9,113.4c-138.5,138.3-138.5,362.6,0,501C219.2,730.1,413.2,743,547.6,666.5l301.9,301.4c43.6,43.6,76.9,14.9,104.2-12.4C981,928.3,1011.8,893,968.2,849.4z M524.5,522c-88.9,88.7-233,88.7-321.8,0c-88.9-88.7-88.9-232.6,0-321.3c88.9-88.7,233-88.7,321.8,0C613.4,289.4,613.4,433.3,524.5,522z" })); }).attrs({
     className: 'search-icon'
-})(SearchBox_styled_elements_templateObject_3 || (SearchBox_styled_elements_templateObject_3 = Object(external_tslib_["__makeTemplateObject"])(["\n  position: absolute;\n  left: ", "px;\n  height: 1.8em;\n  width: 0.9em;\n\n  path {\n    fill: ", ";\n  }\n"], ["\n  position: absolute;\n  left: ", "px;\n  height: 1.8em;\n  width: 0.9em;\n\n  path {\n    fill: ", ";\n  }\n"])), function (props) { return props.theme.spacing.unit * 4; }, function (props) { return props.theme.sidebar.textColor; });
+})(SearchBox_styled_elements_templateObject_3 || (SearchBox_styled_elements_templateObject_3 = Object(external_tslib_["__makeTemplateObject"])(["\n  position: absolute;\n  left: 50px;\n  height: 2.8em;\n  width: 1.2em;\n\n  path {\n    fill: black;\n  }\n"], ["\n  position: absolute;\n  left: 50px;\n  height: 2.8em;\n  width: 1.2em;\n\n  path {\n    fill: black;\n  }\n"])));
 var SearchResultsBox = styled_components.div(SearchBox_styled_elements_templateObject_4 || (SearchBox_styled_elements_templateObject_4 = Object(external_tslib_["__makeTemplateObject"])(["\n  padding: ", "px 0;\n  background-color: ", "};\n  color: ", ";\n  min-height: 150px;\n  max-height: 250px;\n  border-top: ", "};\n  border-bottom: ", "};\n  margin-top: 10px;\n  line-height: 1.4;\n  font-size: 0.9em;\n\n  ", " {\n    padding-top: 6px;\n    padding-bottom: 6px;\n\n    &:hover,\n    &.active {\n      background-color: ", ";\n    }\n\n    > svg {\n      display: none;\n    }\n  }\n"], ["\n  padding: ", "px 0;\n  background-color: ",
     "};\n  color: ", ";\n  min-height: 150px;\n  max-height: 250px;\n  border-top: ",
     "};\n  border-bottom: ",
@@ -14690,7 +14688,7 @@ var SearchBox_SearchBox = /** @class */ (function (_super) {
         return external_react_["createElement"](SearchWrap, { role: "search" },
             this.state.term && external_react_["createElement"](ClearIcon, { onClick: this.clear }, "\u00D7"),
             external_react_["createElement"](SearchIcon, null),
-            external_react_["createElement"](SearchInput, { value: this.state.term, onKeyDown: this.handleKeyDown, placeholder: "Search...", "aria-label": "Search", type: "text", onChange: this.search }),
+            external_react_["createElement"](SearchInput, { value: this.state.term, onKeyDown: this.handleKeyDown, placeholder: "      Filter tag ..", "aria-label": "Search", type: "text", onChange: this.search }),
             results.length > 0 && external_react_["createElement"](PerfectScrollbarWrap, { options: {
                     wheelPropagation: false
                 } },
